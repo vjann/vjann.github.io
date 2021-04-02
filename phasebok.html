@@ -1,0 +1,175 @@
+<!DOCTYPE HTML>
+<!--
+	Read Only by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>HD Photo</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="icon" href="./images/coffee-cup.png">
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<section id="header">
+				<header>
+					<span class="image avatar"><img src="images/avatar.jpg" alt="" /></span>
+					<h1 id="logo"><a href="index.html">Victor Jann</a></h1>
+					<p>CS at UC Berkeley</p>
+				</header>
+				<nav id="nav">
+					<ul>
+						<li><a href="index.html#one">About</a></li>
+						<li><a href="index.html#two" class="active">Projects</a></li>
+						<li><a href="index.html#three">Teaching + Extracurriculars</a></li>
+						<li><a href="index.html#four">Contact</a></li>
+					</ul>
+				</nav>
+				<footer>
+					<ul class="icons">
+						<li><a href="https://www.linkedin.com/in/victorjann/" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						<li><a href="https://github.com/vjann/" target="_blank" class="icon brands fa-github"><span class="label">Github</span></a></li>
+						<li><a href="victorjann@berkeley.edu" target="_blank" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+				</footer>
+			</section>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- One -->
+							<section id="one">
+								<div class="container">
+									<header class="major">
+										<h2>HDPhoto Mobile</h2>
+										<p>My largest solo project to date.<br />
+										</p>
+									</header>
+									<p>My uncle actually entreated my sister to build the app, but she turned it down and apparently
+                    I was the next in line. I took it for two main reasons: I had nothing better to spend my winter
+                    break, and I got to visit relatives and explore Taipei (this also explains why the app is in
+                    Mandarin)!</p>
+                    <h3>TL;DR</h3>
+                    <p>If you just want to see the finished product, here's the beta play store link (android only for now):
+                      <a href="https://play.google.com/store/apps/details?id=com.github.vjann.hdphoto" target="_blank">drive link</a>. It's an app that
+                      lets you pick/upload photos, pay, and wait two weeks for a photobook to show up on your doormat.
+                    </p>
+								</div>
+							</section>
+
+						<!-- Two -->
+							<section id="two">
+								<div class="container">
+									<h2>The Product</h2>
+									<p>Simply put, the user-flow is create album, add pictures, upload, enter customer/shipping info, pay.</p>
+										<article>
+											<div class="dataframe_wrapper">
+	                      <figure class="row2" style="display:flex;">
+	                        <img src="./readmeResources/album.gif" class="readmeGif"<br>
+	                        <img src="./readmeResources/googleAlbum.gif" class="readmeGif"><br>
+	                      </figure>
+											</div>
+                      <div class="inner">
+												<h3>Image Picking (and Album Creation)</h3>
+												<p>There are two main ways of selecting photos: manual selection through your camera roll (left) or by sharing a Google Photos Album into the app! The upload process can be slow,
+                          depending on your connection, but at least it runs in the background, so you can keep choosing photos in the meantime. Don't worry, I made sure to ask the user for permission
+                          before using their precious mobile data.</p>
+											</div>
+										</article>
+										<article>
+                      <figure class="row2" style="display:flex;">
+                        <img src="./readmeResources/editAlbum.gif" class="readmeGif"<br>
+                      </figure>
+											<div class="inner">
+												<h3>Updating the album</h3>
+												<p>Under the my uncle's mantra "Keep it Simple", I sought to strike a balance between functionality and friendliness. My approach: the 4 button UI (and an editable album name
+                          denoted with a pencil logo). Hopefully, the sole reason it's not self explanatory is because it's in Chinese. The four main functions translated are pick images,
+                          delete album, upload/submit, and instructions. </p>
+											</div>
+										</article>
+										<article>
+											<div class="dataframe_wrapper">
+	                      <figure class="row2" style="display:flex;">
+	                        <img src="./readmeResources/info.gif" class="readmeGif"<br>
+													<img src="./readmeResources/payment.gif" class="readmeGif"<br>
+	                      </figure>
+											<div>
+											<div class="inner">
+												<h3>Boring Stuff</h3>
+												<p>And then there's just the fluff needed for the product. That includes product pitch, FAQ, order receipts, and payment. A cool thing about the receipts is that it's
+                          updated with your order status (in orange text), so you know exactly where in the production process your photobook is!</p>
+											</div>
+										</article>
+								</div>
+							</section>
+
+						<!-- Three -->
+							<section id="three">
+								<div class="container">
+                  <article>
+                    <h2>The Process</h2>
+                    <div class="inner">
+                      <h4>Punished by a Plurality of Pitfalls</h4>
+                      <p>I'd be lying if I said creating this app was a walk in the park. In fact, I swore off app dev a third of the way in (I have since
+                      reversed my position).</p>
+                      <p>After all, it was the first time I've used React Native/Javascript
+                      or Firebase. It was much bigger than any other software project I've done, and I was the sole developer. That meant that as hard as I
+                      tried, my original architectural plan was riddled with problems consisting mostly of oversimplifying things. For example, I realized much later that the albums
+                      on an Android were figments of Google Photo's software-- you couldn't directly share a photo folder into the app because it didn't exist in
+                      the device (only in Google Photos)! Plus, what if you saved space by backing up and deleting your photos from your device?
+                      </p>
+                      <p>Due to my lack of initial experience (and the surprising complexity that kept arising), I found myself rewriting code almost as much as
+                        I was writing it. Through this process, I've gained a better grasp on software architecture, UI, API's, and platform specific development.
+                        Though I continue to refine my work, I hope my code does not offend others.</p>
+                    </div>
+                  </article>
+								</div>
+							</section>
+
+						<!-- Four -->
+							<section id="four">
+								<div class="container">
+									<h3>Contact Me</h3>
+									<p>Whether you're a recruiter, long-lost friend, or stranger, I'd love to hear from you!</p>
+									<p>
+										victorjann AT berkeley.edu
+									</p>
+									<p>
+										<a href="https://github.com/vjann" target="_blank" class="image">https://github.com/vjann</a>
+									</p>
+									<p>
+										<a href="https://www.linkedin.com/in/victorjann/" class="image" target="_blank">https://www.linkedin.com/in/victorjann/</a>
+									</p>
+								</div>
+							</section>
+					</div>
+
+				<!-- Footer -->
+					<section id="footer">
+						<div class="container">
+							<ul class="copyright">
+								<li>&copy; Victor Jann. All rights reserved.</li><li>Design: <a href="http://html5up.net" target="_blank">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
