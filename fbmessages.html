@@ -52,8 +52,7 @@
 										<p>For the curious (or petty) friend<br />
 										</p>
 									</header>
-									<p>In summer, I had just completed a Data Science course, and thought, "What could be more interesting than my own conversations?"
-										A word of caution--I found this project a little dangerous! I had to make a conscious effort not to let what I discover affect my friendships.
+									<p>I had just completed a Data Science course, and thought, "What could be more interesting than my own conversations?"
 									</p>
                     <h3>TL;DR</h3>
                     <p class="fb_p">I made pretty plots about my facebook messages. For my complete code, visit my Github repo:
@@ -238,8 +237,7 @@ plot_time_distribution(individual_df[1], individuals_name[1])
 									</div>
 									<h4>Response Time</h4>
 									<p class="fb_p">
-										If you've debated with a friend over who's the better replier, here's how to settle the debate
-										once and for all.
+										Settle the debate on who's the better replier.
 									</p>
 									<pre>
 										<code class="fb_code">
@@ -319,7 +317,7 @@ plt.show()
 									</figure>
 									<h4>Word Cloud</h4>
 									<p class="fb_p">
-										And here's how to create a word cloud, which I saw all over the place but never knew its name.
+										And here's how to create a word cloud.
 										I adapted the code from <a href="https://www.geeksforgeeks.org/find-k-frequent-words-data-set-python/?ref=rp target="_blank"">geeksforgeeks</a>.
 										I used this picture of a <a href="./fbmessages_images/bear.jpg" target="_blank">bear</a>. If you choose to use something else, make sure the colors are pure black and white!
 									</p>
@@ -434,8 +432,7 @@ individuals = [convos for convos in messages_dict if len(convos[0]['participants
 individuals_name = [x[0]['participants'][0]['name'] for x in individuals]
 												</code></pre>
 											<p class="fb_p">Here's the most confusing step! We now have an unprocessed dictionaries, which we can turn into dataframes using 'from_dict'.
-												To make the dataframes easier to use and add features, we calculate sentiment for each message and add a better format for the timestamp.
-												I'm a little burnt, so I'll provide a better explanation later for this (and everything else).</p>
+												To make the dataframes easier to use and add features, we calculate sentiment for each message and add a better format for the timestamp.</p>
 											<pre>
 												<code class="fb_code">
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
