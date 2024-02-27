@@ -1,0 +1,506 @@
+<!DOCTYPE HTML>
+<!--
+	Read Only by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>FB Plots</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="icon" href="./images/coffee-cup.png">
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<section id="header">
+				<header>
+					<span class="image avatar"><img class="fb_image" src="images/avatar.jpg" alt="" /></span>
+					<h1 id="logo"><a href="index.html">Victor Jann</a></h1>
+					<p>Software Engineer/p>
+				</header>
+				<nav id="nav">
+					<ul>
+						<li><a href="index.html#one">About</a></li>
+						<li><a href="index.html#two" class="active">Projects</a></li>
+						<li><a href="index.html#four">Contact</a></li>
+					</ul>
+				</nav>
+				<footer>
+					<ul class="icons">
+						<li><a href="https://www.linkedin.com/in/victorjann/" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						<li><a href="https://github.com/vjann/" target="_blank" class="icon brands fa-github"><span class="label">Github</span></a></li>
+						<li><a href="victorjann@berkeley.edu" target="_blank" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+				</footer>
+			</section>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- One -->
+							<section id="one">
+								<div class="container">
+									<header class="major">
+										<h2>Data Analysis with Messenger Chats</h2>
+									</header>
+                    <p class="fb_p">I made pretty plots from my facebook messenger chats. </p>
+								</div>
+							</section>
+
+						<!-- Two -->
+							<section id="two">
+								<div class="container">
+									<!-- <h2>So What Can We Do?</h2>
+									<p class="fb_p">For now, let's skip the data cleaning and look at what we can do AFTER loading, cleaning, and feature engineering the data.</p>
+									<p class="fb_p">This is what our PANDAS dataframe looks like after processing! In the following examples 'individual_df' is a list of these dataframes,
+										one for each person, 'someone' is the name of a dataframe (a conversation with a singular friend)</p>
+									<pre>
+										<div class="dataframe_wrapper">
+											<table border="1" class="dataframe" style="overflow-x:scroll">
+											  <thead>
+											    <tr style="text-align: right;">
+											      <th></th>
+											      <th>sender_name</th>
+											      <th>content</th>
+											      <th>message_sentiment</th>
+											      <th>num_words</th>
+											      <th>time_stamp</th>
+											      <th>hour</th>
+											      <th>reply</th>
+											      <th>response_seconds</th>
+											      <th>response_days</th>
+											      <th>reactions</th>
+											      <th>sticker</th>
+											      <th>photos</th>
+											      <th>videos</th>
+											      <th>files</th>
+											      <th>gifs</th>
+											      <th>share</th>
+											      <th>type</th>
+											    </tr>
+											  </thead>
+											  <tbody>
+											    <tr>
+											      <th>1723</th>
+											      <td>Victor Jann</td>
+											      <td>i dont*</td>
+											      <td>0.000</td>
+											      <td>2</td>
+											      <td>2020-03-25 19:55:14.930</td>
+											      <td>19.916667</td>
+											      <td>False</td>
+											      <td>4.242</td>
+											      <td>0.0</td>
+											      <td>NaN</td>
+											      <td>NaN</td>
+											      <td>NaN</td>
+											      <td>NaN</td>
+											      <td>NaN</td>
+											      <td>NaN</td>
+											      <td>NaN</td>
+											      <td>Generic</td>
+											    </tr>
+											    <tr>
+											      <th>1716</th>
+											      <td>Victor Jann</td>
+											      <td>LOL what the</td>
+											      <td>0.639</td>
+											      <td>3</td>
+											      <td>2020-03-06 19:55:39.606</td>
+											      <td>19.916667</td>
+											      <td>True</td>
+											      <td>7.164</td>
+											      <td>0.0</td>
+											      <td>NaN</td>
+											      <td>NaN</td>
+											      <td>NaN</td>
+											      <td>NaN</td>
+											      <td>NaN</td>
+											      <td>NaN</td>
+											      <td>NaN</td>
+											      <td>Generic</td>
+											    </tr>
+											    <tr>
+											      <th>8566</th>
+											      <td>Murrah</td>
+											      <td>never mind</td>
+											      <td>0.000</td>
+											      <td>2</td>
+											      <td>2020-02-11 02:24:11.574</td>
+											      <td>2.400000</td>
+											      <td>False</td>
+											      <td>1.985</td>
+											      <td>0.0</td>
+											      <td>NaN</td>
+											      <td>NaN</td>
+											      <td>NaN</td>
+											      <td>NaN</td>
+											      <td>NaN</td>
+											      <td>NaN</td>
+											      <td>NaN</td>
+											      <td>Generic</td>
+											    </tr>
+											    <tr>
+											      <th>6900</th>
+											      <td>Murrah</td>
+											      <td>no i didnt rly need it</td>
+											      <td>-0.306</td>
+											      <td>6</td>
+											      <td>2019-10-12 23:56:34.431</td>
+											      <td>23.933333</td>
+											      <td>True</td>
+											      <td>69.303</td>
+											      <td>0.0</td>
+											      <td>NaN</td>
+											      <td>NaN</td>
+											      <td>NaN</td>
+											      <td>NaN</td>
+											      <td>NaN</td>
+											      <td>NaN</td>
+											      <td>NaN</td>
+											      <td>Generic</td>
+											    </tr>
+											    <tr>
+											      <th>4938</th>
+											      <td>Victor Jann</td>
+											      <td>im very impressed!</td>
+											      <td>0.648</td>
+											      <td>3</td>
+											      <td>2019-12-01 01:03:41.384</td>
+											      <td>1.050000</td>
+											      <td>True</td>
+											      <td>4.898</td>
+											      <td>0.0</td>
+											      <td>NaN</td>
+											      <td>NaN</td>
+											      <td>NaN</td>
+											      <td>NaN</td>
+											      <td>NaN</td>
+											      <td>NaN</td>
+											      <td>NaN</td>
+											      <td>Generic</td>
+											    </tr>
+											  </tbody>
+											</table>
+										</div>
+									</pre> -->
+									<h4>Total Messages</h4>
+									<p class="fb_p">
+										For my closest five friends, let's plot how many messages we have accumulated!
+									</p><pre>
+										<code class="fb_code" >
+# number of rows in each dataframe == number of messages
+num_messages = [x.shape[0] for x in individual_df]
+sns.barplot(num_messages[:5],individuals_name[:5])
+plt.title("Messages")
+plt.ylabel("Person")
+plt.xlabel("Number of Messages")
+										</code></pre>
+									<figure class="row2" style="display:flex;">
+										<img class="fb_image" src="./fbmessages_images/top_friends_msg_count.png" style="width:500px;height:500px;margin:0px;padding:0px;">
+									</figure>
+									<h4>Time of Day Distribution</h4>
+									<p class="fb_p">
+										To see when we're most active, take a distribution plot with the hour attribute. You can easily tell that
+										my sleep schedule has shifted back quite a bit since I got to college.
+									</p>
+									<pre>
+										<code class="fb_code">
+def plot_time_distribution(df, name):
+    sns.distplot(df['hour'], kde=False, label = 'hi', norm_hist=True, bins=np.arange(0, 25, 0.5))
+    plt.title("Time of Day Distribution with {}".format(name))
+    plt.ylabel("Proportion of Messages")
+    plt.xticks(np.arange(0, 25, 1))
+
+plot_time_distribution(individual_df[0], individuals_name[0])
+plot_time_distribution(individual_df[1], individuals_name[1])
+										</code></pre>
+									<div class="dataframe_wrapper">
+										<figure class="row2" style="display:flex;">
+											<img class="fb_image" src="./fbmessages_images/time_distribution_Harpp.png" style="width:450px;height:260px;">
+											<img class="fb_image" src="./fbmessages_images/time_distribution_Murrah.png" style="width:450px;height:260px;">
+										</figure>
+									</div>
+									<h4>Response Time</h4>
+									<p class="fb_p">
+										Settle the debate on who's the better replier.
+									</p>
+									<pre>
+										<code class="fb_code">
+def plot_response_time(df, name, i):
+    sns.distplot(np.log(df[df['reply'] & (df['sender_name'] == 'Victor Jann')]['response_seconds']).fillna(1.0), label='Victor')
+    sns.distplot(np.log(df[df['reply'] & (df['sender_name'] != 'Victor Jann')]['response_seconds']).fillna(1.0), label=name)
+    plt.title('Response Time with {}'.format(name))
+    plt.xlabel("Response Time in log(seconds)")
+    plt.legend()
+    plt.show()
+plot_response_time(individual_df[0], individuals_name[0]
+										</code></pre>
+									<div class="dataframe_wrapper">
+										<figure class="row2" style="display:flex;">
+											<img class="fb_image" src="./fbmessages_images/response_time_distribution_Harpp.png" style="width:675px;height:390px;"<br>
+										</figure>
+									</div>
+									<h4>Finding Differences</h4>
+									<p class="fb_p">
+										Here's some examples of how to quantify what you've said to your friend, and vice-versa
+									</p>
+									<pre>
+										<code class="fb_code">
+def plot_simple_groupings(df, title):
+    plt.figure()
+    sns.barplot(data=df, x=df.index, y='num_words')
+    plt.title("{}".format(title))
+    plt.ylabel("Count".format(title))
+    plt.xlabel("Person")
+		plt.show()
+
+messages = someone.groupby('sender_name').count()
+
+message_len = someone.groupby('sender_name').mean()
+
+stickers = someone[someone['sticker'].notna()].groupby('sender_name').count()
+spotify_links = someone[(someone['content'].str.contains("https://open.spotify.com/track")) |
+                       someone['share'].fillna({'link': 'dummy'}).apply(lambda x: not isinstance(x, float) and "https://open.spotify.com/track" in x['link'])]
+spotify_links = spotify_links.groupby('sender_name').count()
+
+plot_simple_groupings(messages, 'Messages Sent')
+plot_simple_groupings(message_len, 'Average Message Length (Words)')
+# ... keep going (or turn it into a loop)
+plot_simple_groupings(spotify_links, "Spotify Links Sent")
+										</code></pre>
+									<div class="dataframe_wrapper">
+										<figure class="row2" style="display:flex;">
+											<img class="fb_image" src="./fbmessages_images/simple_groupings_Average_Message_Length.png"<br>
+											<img class="fb_image" src="./fbmessages_images/simple_groupings_Messages_Sent.png"<br>
+											<img class="fb_image" src="./fbmessages_images/simple_groupings_Stickers_Sent.png"<br>
+										</figure>
+									</div>
+									<h4>Messages Over Time</h4>
+									<p class="fb_p">
+										It's also pretty cool to see how a friendship evolves over time. The following simply plots the number of messages a day, for every day.
+										The variations, like heart reacts over time, are endless!
+									</p>
+									<pre>
+										<code class="fb_code">
+someone['date'] = someone['time_stamp'].dt.date
+groupby_date = someone.groupby('date').count()
+plt.bar(x=groupby_date.index, height=groupby_date['content'])
+plt.title("Messages per Day")
+plt.ylabel("Number of Messages")
+plt.xlabel("Date")
+plt.show()
+										</code></pre>
+									<figure class="row2" style="display:flex;">
+										<img class="fb_image" src="./fbmessages_images/messages_over_time.png" style="width:550px;height:400px;">
+									</figure>
+									<h4>Word Cloud</h4>
+									<p class="fb_p">
+										And here's how to create a word cloud, adapted from <a href="https://www.geeksforgeeks.org/find-k-frequent-words-data-set-python/?ref=rp target="_blank"">geeksforgeeks</a>.
+									</p>
+									<pre>
+										<code class="fb_code">
+from PIL import Image as PILImage
+from collections import Counter
+from wordcloud import WordCloud, STOPWORDS
+
+#optional add more words to ignore
+more_words = []
+for w in more_words:
+    STOPWORDS.add(w)
+
+np.savetxt(r'../messages/pure_message_content_vj.txt', someone[someone['sender_name'] == 'Victor Jann']['content'].values, fmt="%s")
+
+dataset_vj = open("../messages/pure_message_content_vj.txt", "r").read().lower()
+
+maskArray = np.array(PILImage.open("../bear.jpg"))
+cloud = WordCloud(background_color = "white", max_words = 200, mask = maskArray, stopwords = set(STOPWORDS))
+cloud.generate(dataset_vj)
+cloud.to_file("./outputs/wordCloud_vj.png")
+										</code></pre>
+									<figure class="row2" style="display:flex;">
+										<img class="fb_image" src="./fbmessages_images/wordCloud_vj.png" style="width:700px;height:500px;"<br>
+									</figure>
+									<h4>Message Classification</h4>
+									<p class="fb_p">
+										Lastly, here's how to build a classifier that can take any message and guess who sent it, using BERT + CNN using Keras and Google Colab. I did something really similar for research last semester, so I repurposed my own code!
+										<!-- It's pretty (really) involved, so instead of laying out the code I'll just provide a link to the colab.
+										<a href="https://colab.research.google.com/drive/1AmFke--2whBkLpY5LKQcaskBeVIvSBPF?usp=sharing target="_blank"">Here's the colab notebook!</a> -->
+									</p>
+									<p class="fb_p">
+										It ended with ~70% test accuracy, and you can then feed silly phrases and ask it to guess who's more likely to have said it.
+										In this case, a score closer to 0 is Victor-like.
+									</p>
+									<figure class="row2" style="display:flex;">
+										<img class="fb_image" src="./fbmessages_images/classify.png" style="width:750px;height:350px;"<br>
+									</figure>
+								</div>
+							</section>
+
+						<!-- Three -->
+							<section id="three">
+								<div class="container">
+                  <!-- <article>
+                    <h2>The Process</h2>
+                    <div class="inner">
+                      <h4>Preprocessing the Data!</h4>
+                      <p>
+												The techniques I used above are relatively standard, and made possible only by the messy preprocessing of the raw data!
+												The data you download from Facebook is a little hard to navigate, so I've provided a bit of insight into how it's structured.
+											</p>
+                      <p class="fb_p">General Overview: In the unzipped folder you've downloaded, the chats are in the 'inbox' subdirectory. Inside 'inbox' are more folders,
+												two for each conversation (including group convos). Each such pair of folders consists of one for the messages itself, one for the media shared (e.g. files or photos).
+                      </p>
+											<p class="fb_p">
+												We only used the folders with the text messages itself (.json files). If a conversation is too long (something like 10,000 messages), it will be split up into more
+												than one json file. We create the dataframes using these .json files.
+											</p>
+                      <p class="fb_p">Let's get to the code! First, let's find all the paths to the .json files.</p>
+											<pre>
+												<code class="fb_code">
+import pandas as pd
+import numpy as np
+import glob
+import datetime
+import os
+import json
+import seaborn as sns
+import matplotlib.pyplot as plt
+import emoji
+inbox_dir = "../messages/inbox/*"
+
+messages_paths = []
+for f in glob.glob(inbox_dir): #for each folder
+    chats_json = glob.glob(f + '/*.json')
+
+		# The folders for shared media have no .json files-- ignore those
+    if not chats_json:
+        continue
+    messages_paths.append(glob.glob(f + '/*.json'))
+												</code></pre>
+											<p class="fb_p">I only took my 100 longest conversations. I approximated this using the sum of the file sizes</p>
+											<pre>
+												<code class="fb_code">
+def total_size(message_files):
+    size = 0
+    for file in message_files:
+        size += os.path.getsize(file)
+    return size
+
+messages_paths.sort(reverse=True, key=total_size)
+messages_paths = messages_paths[:100]
+												</code></pre>
+											<p class="fb_p">Turn the .json files to python dictionaries.
+												Separate private messages from group messages (I'll omit group messages here)</p>
+											<pre>
+												<code class="fb_code">
+messages_dict = []
+for convos in messages_paths:
+    data = []
+    for convo in convos:
+        with open(convo) as f:
+            data.append(json.load(f))
+    messages_dict.append(data)
+
+#split messages_dict into group convos and individual convos
+individuals = [convos for convos in messages_dict if len(convos[0]['participants']) == 2]
+#individuals_name is important for keeping track of whose dataframe is whose
+individuals_name = [x[0]['participants'][0]['name'] for x in individuals]
+												</code></pre>
+											<p class="fb_p">Here's the most confusing step! We now have an unprocessed dictionaries, which we can turn into dataframes using 'from_dict'.
+												To make the dataframes easier to use and add features, we calculate sentiment for each message and add a better format for the timestamp.</p>
+											<pre>
+												<code class="fb_code">
+from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
+
+sid_obj = SentimentIntensityAnalyzer()
+def create_df(lst_of_dict):
+    """function creates dataframe for each convo"""
+    def get_message_sentiment(message):
+        result = sid_obj.polarity_scores(message)
+        return result['pos'] - result['neg']
+
+    #if conversation split into diff json files, combine them
+    all_messages = pd.concat(pd.DataFrame.from_dict(x['messages']) for x in lst_of_dict[::-1])
+    all_messages['content'] = all_messages['content'].fillna('')
+
+    #change weird time_stamp into usable/understandable numbers and datetime objects
+    all_messages['time_stamp'] = all_messages['timestamp_ms'].apply(lambda x: datetime.datetime.fromtimestamp(x/1000))
+    all_messages['hour'] = all_messages['time_stamp'].dt.hour + all_messages['time_stamp'].dt.minute/60
+    time_stamp_diff = all_messages['time_stamp'].diff(periods=-1)
+    all_messages['response_seconds'] = time_stamp_diff.dt.microseconds/1000000 + time_stamp_diff.dt.seconds
+    all_messages['response_days'] = time_stamp_diff.dt.days.fillna(0)
+
+
+    all_messages['num_words'] = all_messages['content'].str.findall(r"\w+").apply(lambda x: len(x))
+    all_messages['message_sentiment'] = all_messages['content'].apply(get_message_sentiment)
+
+    #hashing names because subsequent rolling must take in numbers
+    all_messages['name_hashed'] = all_messages['sender_name'].apply(hash)
+    all_messages['reply'] = np.roll(all_messages['name_hashed'].rolling(2).apply(lambda x: int(list(x)[0] - list(x)[1])) != 0, -1)
+
+    #pick out relevant columns
+    final_columns = ['sender_name', 'content', 'message_sentiment', 'num_words', 'time_stamp',
+         'hour', 'reply', 'response_seconds', 'response_days', 'reactions', 'sticker',
+         'photos', 'videos', 'files', 'gifs', 'share', 'type']
+    # Not columns will be the same, e.g. you won't have a gifs column for a conversation where noone sent a gif
+    all_messages = all_messages[[col for col in final_columns if col in all_messages.columns]]
+    return all_messages
+
+#create dataframe for each individual convo
+individual_df = [create_df(x) for x in individuals]
+												</code></pre>
+											<h3>And we're done with preprocessing!</h3>
+											<p>You should have the dataframe found at the top of this page and
+												be able to do all the cool things starting from the top.</p>
+                    </div>
+                  </article> -->
+								</div>
+							</section>
+
+						<!-- Four -->
+							<section id="four">
+								<div class="container">
+									<h3>Contact Me</h3>
+									<p>
+										victorjann AT berkeley.edu
+									</p>
+									<p>
+										<a href="https://github.com/vjann" target="_blank">https://github.com/vjann</a>
+									</p>
+									<p>
+										<a href="https://www.linkedin.com/in/victorjann/" target="_blank">https://www.linkedin.com/in/victorjann/</a>
+									</p>
+								</div>
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<section id="footer">
+						<div class="container">
+							<ul class="copyright">
+								<li>&copy; Victor Jann. All rights reserved.</li><li>Design: <a href="http://html5up.net" target="_blank">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

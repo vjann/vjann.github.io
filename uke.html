@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity Ukelele</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="ukeWebGL/TemplateData/UnityProgress.js"></script>
+    <script src="ukeWebGL/Build/UnityLoader.js"></script>
+    <script>
+      var unityInstance = UnityLoader.instantiate("unityContainer", "ukeWebGL/Build/ukeWebGL.json", {onProgress: UnityProgress});
+    </script>
+  </head>
+  <body>
+    <div class="webgl-content">
+      <div id="unityContainer" style="width: 960px; height: 600px"></div>
+      <div class="footer">
+        <div class="webgl-logo"></div>
+        <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+        <p>Hi! It's definitely not flushed out but here's the basics:
+          You can use the keyboard as the frets on the ukelele-- for example,
+          to strum a G chord you would hold down '2', 'e', and 'd' keys
+          and pass over all the strings with your mouse. To 'learn' or get help on chords,
+          The buttons ('G', 'C', 'Am') are pressible and it'll give you a guide at the bottom.
+          Another way to strum is to use the 'UP' and 'DOWN' arrows on the keyboard.
+        </p>
+        <ul>
+          <li> Strumming: Pass mouse over the strings or use 'UP' and 'DOWN' arrows </li>
+          <li> Chords/Fretting: Follow the diagram on the bottom left. For example, holding down 'X' would give you an Am chord. </li>
+          <li> Pressing the Chord Buttons will show you the chord fingerings! </li>
+        </ul>
+        <p>
+          There are lots of limitations/future improvements:
+        </p>
+        <ul>
+          <li> The UI isn't great, especially needing an introduction screen, instructions, etc. </li>
+          <li> I can always add more chords and notes </li>
+          <li> Something easy I could add is dynamic volume, so softer with slower strums and louder with faster strums </li>
+          <li> A cool idea I'd like to add one day is feedback on what keys the user is currently pressing, either on the uke or on the chord helper at the bottom</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
